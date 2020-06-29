@@ -1,0 +1,15 @@
+﻿@model entfw1.Models.User
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<h2>User @Model.Name</h2>
+<div>
+<dl class="dl-horizontal">
+    <dt>ID</dt>
+    <dl>@Model.Id</dl>
+    <dt>Age</dt>
+    <dl>@Model.Age</dl>
+</dl>
+</div>

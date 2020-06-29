@@ -1,0 +1,17 @@
+﻿@model IEnumerable<entfw1.Models.User>
+@{
+    ViewBag.Title = "All users";
+}
+<a asp-action="Create">Add User</a>
+<table class="table">
+    
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Name</td>
+        <td>
+            <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">Details</a>
+            <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id">Edit</a>
+            <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.Id">Delete</a>
+    </td></tr>
+    }
+</table>
